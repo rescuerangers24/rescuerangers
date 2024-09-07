@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"type=text/css href="style4.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		
+		body{
+			background-color: white;
+			background-size: cover;
+			background-repeat:no-repeat ;
+			color: #008374;
+			
+		}
+		.header{
+			padding-top: 10%;
+			padding-left: 5%;
+			text-decoration: underline;
+			
+		}
+		.sun{
+			padding-left:30%;
+			font-size: 100px;
+			color:#008374;
+		}
+		.div1{
+			padding-left:0%;
+
+		}
+
+		
+	</style>
+
+	
+	
+
+</head>
+<body>
+	  <div class="div1">
+      <img src="donate.jpg" width="600px" height="800vh">
+  </div>
+	 <form>
+	 	
+	<div class="container">
+		
+
+	<b>Enter FirstName:</b><input type="text"name="FirstName"placeholder="Enter FirstName" value=""required>
+	<br><br><b>Enter MiddleName:</b><input type="text"name="MiddleName"placeholder="Enter MiddleName">
+	<br><br><b>Enter LastName:-</b><input type="text"name="LastName"placeholder="Enter LastName" value=""required>
+	<br><br><b>Enter MailId:-</b><input type="Email"name="MailId"placeholder="Enter MailId" value=""required>
+	<br><br><b>Enter MobileNumber:-</b><input type="Number"name="MobileNumber"value=""required placeholder="Enter MobileNumber">
+	 <br><br><b>Gender:-</b><input type="radio"id="male" name="gender"/>male<input type="radio"id="Female" name="gender"/>Female<input type="radio"id="other" name="gender"/>other<br><br>
+	 Select Donate Type:<select id="pageDropdown">
+	 	<option></option>
+	 	<option value="locationtrace.html">FOOD</option>
+	 	<option value="upi.html">Money</option>
+	 </select>
+	 	
+    
+	<br><br><b>Enter date of birth:-</b><input type="date"><br><br>
+	
+	
+	<div class="form-group">
+        <label for="identityProof">Proof of Identity</label>
+        <select id="identityProof" name="identityProof" onchange="showIdInput()" required>
+          <option value="">--Select Proof--</option>
+          <option value="aadhar">Aadhar</option>
+          <option value="pan">PAN</option>
+          <option value="other">Other</option>
+        </select><br><br>
+      </div>
+
+      <div class="form-group" id="idNumberGroup" style="display:none;">
+        <label for="idNumber">Enter ID Number</label>
+        <input type="text" id="idNumber" name="idNumber">
+      </div>
+        
+    <br><input type="file" id="file" accept="image/*" value=""required> 
+    <br><br><b>Enter date of birth:-</b><input type="date">
+    <br><br><label><input type="checkbox" value=""required>I hereby declare  the above information provided is true and correct </label>
+    <br><br><b><button>DONATE </button>
+    
+    </div>
+    <script>
+    function showIdInput() {
+      const identityProof = document.getElementById("identityProof").value;
+      const idNumberGroup = document.getElementById("idNumberGroup");
+
+      if (identityProof) {
+        idNumberGroup.style.display = "block";
+        document.getElementById("idNumber").setAttribute("required", "true");
+      } else {
+        idNumberGroup.style.display = "none";
+        document.getElementById("idNumber").removeAttribute("required");
+      }
+    }
+  </script>
+    
+    </div>
+	</div>
+	<script>
+        // JavaScript to handle the dropdown change event
+        document.getElementById('pageDropdown').addEventListener('change', function() {
+            var selectedPage = this.value;
+            if (selectedPage) {
+                window.location.href = selectedPage;
+            }
+        });
+    </script>
+</form>
+	    
+        
+
+
+	 
+	
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"type=text/css href="style3.css">
+    <style>
+        
+        body{
+            
+            background-size: cover;
+            background-repeat:no-repeat ;
+        
+            
+            
+             
+            
+            
+            
+
+        }
+        
+    </style>
+
+    
+    
+
+</head>
+<body>
+        
+<form>
+    <div class="container">
+        
+
+    <b>Enter FirstName:</b><input type="text"name="FirstName"placeholder="Enter FirstName">
+    <br><b>Enter MiddleName:</b><input type="text"name="MiddleName"placeholder="Enter MiddleName">
+    <br><b>Enter LastName:-</b><input type="text"name="LastName"placeholder="Enter LastName">
+    <br><b>Enter MailId:-</b><input type="Email"name="MailId"placeholder="Enter MailId">
+    <br><b>Enter MobileNumber:-</b><input type="Number"name="MobileNumber"placeholder="Enter MobileNumber">
+     <br><b>Gender:-</b><input type="radio"id="male" name="gender"/>male<input type="radio"id="Female" name="gender"/>Female<input type="radio"id="other" name="gender"/>other
+    <br><b>Enter date of birth:-</b><input type="date">
+    <br><label><input type="checkbox">I hereby declare  the above information provided is true and correct</label>
+    <div class="form-group">
+        <label for="identityProof">Proof of Identity</label>
+        <select id="identityProof" name="identityProof" onchange="showIdInput()" required>
+          <option value="">--Select Proof--</option>
+          <option value="aadhar">Aadhar</option>
+          <option value="pan">PAN</option>
+          <option value="other">Other</option>
+        </select><br>
+      </div>
+
+      <div class="form-group" id="idNumberGroup" style="display:none;"><br>
+        <label for="idNumber">Enter ID Number</label>
+        <input type="text" id="idNumber" name="idNumber">
+      </div>
+        
+    <br><br><input type="file" id="file" accept="image/*" value=""required> 
+    <br><br><b>Enter date of birth:-</b><input type="date">
+    <br><br><label><input type="checkbox" value=""required>I hereby declare  the above information provided is true and correct </label>
+    <br><b><button>Register  </button>
+    </div>
+    <script>
+    function showIdInput() {
+      const identityProof = document.getElementById("identityProof").value;
+      const idNumberGroup = document.getElementById("idNumberGroup");
+
+      if (identityProof) {
+        idNumberGroup.style.display = "block";
+        document.getElementById("idNumber").setAttribute("required", "true");
+      } else {
+        idNumberGroup.style.display = "none";
+        document.getElementById("idNumber").removeAttribute("required");
+      }
+    }
+  </script>
+    <br><b><button>Register</button>
+    </div>
+</form>
+        
+        
+
+
+     
+    
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rescue Rangers Volunteer Network</title>
+  <style>
+    /* Global Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1400px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .header {
+      background-color: brown;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .map-section {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/71/India_location_map_with_telangana_and_ap.png');
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .locality {
+      position: absolute;
+      background-color: pink;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.9rem;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .locality:hover {
+      background-color: #c0392b;
+      transform: scale(1.1);
+    }
+
+    .locality-details {
+      display: none;
+      position: absolute;
+      background-color: white;
+      color: black;
+      padding: 15px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .locality:hover .locality-details {
+      display: block;
+    }
+
+    /* Specific Locality Positions */
+    .nandyal {
+      top: 60%;
+      left: 38%;
+    }
+
+    .kurnool {
+      top: 55%;
+      left: 36%;
+    }
+
+    .khammam {
+      top: 45%;
+      left: 50%;
+    }
+
+    .panyam {
+      top: 58%;
+      left: 40%;
+    }
+
+    .thammarajupalle {
+      top: 62%;
+      left: 42%;
+    }
+
+    .orvakal {
+      top: 52%;
+      left: 37%;
+    }
+
+    .guntur {
+      top: 47%;
+      left: 45%;
+    }
+
+    .footer {
+      background-color: brown;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Rescue Rangers Volunteer Network</h1>
+    <p>Explore our volunteers located in various regions of Andhra Pradesh and Telangana</p>
+  </div>
+
+  <!-- Map Section -->
+  <div class="map-section">
+    <!-- Locality Markers -->
+    <div class="locality nandyal">
+      Nandyal
+      <div class="locality-details">
+        <h3>Nandyal</h3>
+        <p>Volunteers: 5</p>
+        <p>Head Volunteer: Geetha</p>
+      </div>
+    </div>
+
+    <div class="locality kurnool">
+      Kurnool
+      <div class="locality-details">
+        <h3>Kurnool</h3>
+        <p>Volunteers: 8</p>
+        <p>Head Volunteer: Reshma</p>
+      </div>
+    </div>
+
+    <div class="locality khammam">
+      Khammam
+      <div class="locality-details">
+        <h3>Khammam</h3>
+        <p>Volunteers: 7</p>
+        <p>Head Volunteer: Alekhya</p>
+      </div>
+    </div>
+
+    <div class="locality panyam">
+      Panyam
+      <div class="locality-details">
+        <h3>Panyam</h3>
+        <p>Volunteers: 4</p>
+        <p>Head Volunteer: Anoosha</p>
+      </div>
+    </div>
+
+    <div class="locality thammarajupalle">
+      Thammarajupalle
+      <div class="locality-details">
+        <h3>Thammarajupalle</h3>
+        <p>Volunteers: 6</p>
+        <p>Head Volunteer: Umesh</p>
+      </div>
+    </div>
+
+    <div class="locality orvakal">
+      Orvakal
+      <div class="locality-details">
+        <h3>Orvakal</h3>
+        <p>Volunteers: 3</p>
+        <p>Head Volunteer: Visesh</p>
+      </div>
+    </div>
+
+    <div class="locality guntur">
+      Guntur
+      <div class="locality-details">
+        <h3>Guntur</h3>
+        <p>Volunteers: 9</p>
+        <p>Head Volunteer: Arshad</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    Rescue Rangers Team | Dedicated Volunteers Across Andhra Pradesh & Telangana | © 2024 All Rights Reserved
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Counter - Rescue Rangers</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: black;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .counter-box {
+      background-color: skyblue;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: black;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: lightpink;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Donations Today</h1>
+  
+  <!-- Donation Counter Display -->
+  <div class="counter-box" id="donationCount">0</div>
+  
+  <!-- Simulate Donation Button -->
+  <button onclick="increaseDonation()">Make a Donation</button>
+</div>
+
+<script>
+  // Initialize the donation count
+  let donationCount = 0;
+
+  // Function to increase donation count
+  function increaseDonation() {
+    donationCount++; // Increment the count by 1
+    document.getElementById('donationCount').innerText = donationCount; // Update the count in the UI
+  }
+</script>
+
+</body>
+</html>

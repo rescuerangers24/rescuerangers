@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rescue Rangers - Volunteer Network</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7f6;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      color: #16a085;
+    }
+
+    #map {
+      height: 600px;
+      width: 90%;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .legend {
+      background-color: white;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .legend h3 {
+      font-size: 1rem;
+      margin-top: 0;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Our Volunteer Network</h1>
+
+<!-- Map Container -->
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-geojson@1.0.3/dist/leaflet-geojson.min.js"></script>
+
+<script>
+  // Initialize the map and set its view
+  var map = L.map('map').setView([16.5, 80], 7); // Centering on AP and Telangana
+
+  // Add OpenStreetMap tile layer
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // GeoJSON object with the coordinates and names of your localities
+  var localities = [
+    { "name": "Kurnool", "coordinates": [15.8281, 78.0373], "volunteers": 12 },
+    { "name": "Nandyal", "coordinates": [15.4885, 78.4831], "volunteers": 10 },
+    { "name": "Panyam", "coordinates": [15.4133, 78.5688], "volunteers": 8 },
+    { "name": "Ongole", "coordinates": [15.5057, 80.0499], "volunteers": 7 },
+    { "name": "Vijayawada", "coordinates": [16.5062, 80.6480], "volunteers": 14 },
+    { "name": "Khammam", "coordinates": [17.2473, 80.1514], "volunteers": 9 },
+    { "name": "Guntur", "coordinates": [16.3067, 80.4365], "volunteers": 11 }
+  ];
+
+  // Function to add markers and display the volunteer count in popups
+  localities.forEach(function(locality) {
+    L.marker(locality.coordinates)
+      .addTo(map)
+      .bindPopup(<strong>${locality.name}</strong><br>Volunteers: ${locality.volunteers});
+  });
+
+  // Example GeoJSON for showing border outlines of specific regions
+  var geoJsonData = {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": { "name": "Kurnool" },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [78.0196, 15.8153], [78.0562, 15.8289], [78.0806, 15.8462],
+              [78.0978, 15.8695], [78.1035, 15.8956], [78.0988, 15.9227],
+              [78.0831, 15.9472], [78.0599, 15.9647], [78.0317, 15.9744],
+              [78.0018, 15.9756], [77.9734, 15.9680], [77.9493, 15.9532],
+              [77.9320, 15.9328], [77.9230, 15.9094], [77.9234, 15.8848],
+              [77.9330, 15.8612], [77.9510, 15.8410], [77.9763, 15.8266],
+              [78.0196, 15.8153]
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": { "name": "Vijayawada" },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [80.6134, 16.4997], [80.6300, 16.5084], [80.6407, 16.5222],
+              [80.6446, 16.5388], [80.6415, 16.5558], [80.6317, 16.5711],
+              [80.6164, 16.5830], [80.5978, 16.5900], [80.5776, 16.5911],
+              [80.5580, 16.5862], [80.5415, 16.5758], [80.5301, 16.5607],
+              [80.5249, 16.5436], [80.5263, 16.5265], [80.5342, 16.5110],
+              [80.5480, 16.4992], [80.6134, 16.4997]
+            ]
+          ]
+        }
+      }
+    ]
+  };
+
+  // Add the GeoJSON outlines to the map with styling
+  L.geoJSON(geoJsonData, {
+    style: function (feature) {
+      return {
+        color: "#e74c3c",  // Outline color
+        weight: 2,
+        fillOpacity: 0.1  // Light fill for selected regions
+      };
+    }
+  }).addTo(map);
+
+</script>
+
+</body>
+</html>

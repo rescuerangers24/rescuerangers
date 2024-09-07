@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Map Location Tracker</title>
+  <style>
+    /* Set the size for the map */
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Google Map Location Tracker</h1>
+  
+  <!-- Google Map Embed -->
+  <div id="map"></div>
+
+  <script>
+    function initMap() {
+      // Set the location (latitude, longitude)
+      const location = { lat: 37.7749, lng: -122.4194 }; // Example: San Francisco
+
+      // Create a new map instance
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: location,
+      });
+
+      // Add a marker to the map
+      const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+      });
+    }
+  </script>
+  
+  <!-- Google Maps JavaScript API (Insert your API key here) -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+  
+</body>
+</html>

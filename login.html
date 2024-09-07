@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <title>Login</title>
+    
+    <script>
+        
+        function showAlert(event) {
+            event.preventDefault();  
+            var username = document.getElementById('Uname').value;
+            var password = document.getElementById('pwd').value;
+
+            if (username && password) {
+                alert("Login Successful!\nUsername: " + username);
+            } else {
+                alert("Please enter both username and password.");
+            }
+        }
+
+        
+        function clearForm() {
+            document.getElementById('f1').reset();  
+        }
+    </script>
+</head>
+
+<body>
+
+<form id="f1">
+    <table align="center" border="2">
+        <tr>
+            <td>User Name</td>
+            <td>
+                <input type="text" id="Uname" name="uname"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>
+                <input type="password" id="pwd" name="pwd"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" id="Login" name="register" value="Login" onclick="showAlert(event)"/><br>
+                <a href="register2.html">Signup</a>
+            </td>
+            <td>
+                <input type="button" id="clear" name="clear" value="Clear" onclick="clearForm()"/>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

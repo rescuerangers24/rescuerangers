@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us - Team</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+            margin-bottom: 50px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid black;
+        }
+
+        .team-member h3 {
+            margin: 10px 0;
+            color: deeppink;
+        }
+
+        .team-member p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .team-member a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #fff;
+            background-color: #008374;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .team-member a:hover {
+            background-color: black;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Meet Our Team</h1>
+
+    <div class="team-grid">
+         <div class="team-member">
+            <img src="hodsir.jpg" alt="Farooq">
+            <!-- Farooq -->
+            <h3>Dr Farooq </h3>
+            <p>Mentor/Guide</p>
+            <p>Email:hod.cse@srecnandyal.edu.in </p>
+            <a href="mailto:farooq@example.com">Contact Dr Farooq </a>
+        </div>
+        <!-- Alekhya -->
+        <div class="team-member">
+            <img src="ali.jpg" alt="Alekhya">
+            <h3>A.Alekhya</h3>
+            <p>Backend Developer</p>
+            <p>Email: alekhyaalavalapati22@gmail.com</p>
+            <a href="alekhyaalavalapati22@gmail.com">Contact Alekhya</a>
+        </div>
+
+        <!-- Geetha -->
+        <div class="team-member">
+            <img src="gee.jpg" alt="Geetha">
+            <h3>M.Geetha</h3>
+            <p>Frontend Developer</p>
+            <p>Email: geethamopuri23@gmail.com</p>
+            <a href="mailto:geethamopuri23@gmail.com">Contact Geetha</a>
+        </div>
+
+        <!-- Reshma -->
+        <div class="team-member">
+            <img src="reshu.png" alt="Reshma">
+            <h3>M.Reshma</h3>
+            <p>Data analyst</p>
+            <p>Email: reshmamomin970@gmail.com</p>
+            <a href="mailto:reshmamomin970@gmail.com">Contact Reshma</a>
+        </div>
+        <!-- Anoosha -->
+        <div class="team-member">
+            <img src="anoosha.jpg" alt="Anoosha">
+            <h3>K.Anoosha</h3>
+            <p>Tester</p>
+            <p>Email: anooshaanu246@gmail.com</p>
+            <a href="mailto:anooshaanu246@gmail.com">Contact Anoosha</a>
+        </div>
+
+        
+        
+    </div>
+</div>
+
+<footer>
+    <p>&copy;  Our Team. The Rescue rangers.</p>
+</footer>
+
+</body>
+</html>

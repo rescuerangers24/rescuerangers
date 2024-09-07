@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weekend Volunteer Form</title>
+    <link rel="stylesheet" href="style10.css">
+</head>
+<body>
+    <div class="container">
+        <h1> weekend volunteer Form</h1>
+        <form id="registrationForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="middleName">Middle Name:</label>
+            <input type="text" id="middleName" name="middleName">
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" required>
+
+            <label for="idProof">Select ID Proof:</label>
+            <select id="idProof" name="idProof" required>
+                <option value="">Select ID Proof</option>
+                <option value="passport">Passport</option>
+                <option value="driverLicense">Driver License</option>
+                <option value="nationalId">National ID</option>
+            </select>
+
+            <div id="idProofDetails" style="display: none;">
+                <label for="idProofNumber">ID Proof Number:</label>
+                <input type="text" id="idProofNumber" name="idProofNumber">
+
+                <label for="idProofImage">Upload ID Proof Image:</label>
+                <input type="file" id="idProofImage" name="idProofImage" accept="image/*">
+            </div>
+
+            <label for="donationType">Select Donation Type:</label>
+            <select id="donationType" name="donationType" required>
+                <option value="">Select Donation Type</option>
+                <option value="food">Food</option>
+                <option value="money">Money</option>
+            </select>
+
+            <div id="foodDetails" style="display: none;">
+                <label for="location">Share Your Location:</label>
+                <button type="button" id="getLocation">Get Current Location</button>
+                <input type="text" id="location" name="location" readonly>
+            </div>
+
+            <div id="moneyDetails" style="display: none;">
+                <label for="upi">Enter UPI ID:</label>
+                <input type="text" id="upi" name="upi">
+            </div>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <div>
+                <input type="checkbox" id="confirm" name="confirm">
+                <label for="confirm">I hereby confirm that all information is correct.</label>
+            </div>
+
+            <button type="submit" id="donateButton" disabled>Donate</button>
+        </form>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>

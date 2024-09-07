@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Donation Tracker - YouTube Stream</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #e3f1ff);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 85%;
+      max-width: 1200px;
+      background-color: #fff;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .header {
+      background-color: lightblue;
+      padding: 30px;
+      text-align: center;
+      color: black;
+      position: relative;
+    }
+
+    .header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .header::before {
+      content: "LIVE NOW!";
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: #ff0000;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .main-content {
+      padding: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      flex-wrap: wrap;
+    }
+
+    .live-stream {
+      flex: 2;
+      margin-right: 20px;
+      background-color: black;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .live-stream iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .info-section {
+      flex: 1;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-section h2 {
+      font-size: 1.8rem;
+      color: black;
+      margin-bottom: 15px;
+    }
+
+    .info-section p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .join-live-btn {
+      display: inline-block;
+      background-color: black;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .join-live-btn:hover {
+      background-color: #e55340;
+    }
+
+    .impact-stats {
+      background-color: #eee;
+      padding: 30px;
+      text-align: center;
+      border-top: 2px solid #ddd;
+    }
+
+    .impact-stats h3 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .stats-list {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .stats-list li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .stats-list li .number {
+      font-size: 2.5rem;
+      color: #ff6347;
+      font-weight: bold;
+    }
+
+    .stats-list li .label {
+      font-size: 1rem;
+      color: #777;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+      }
+      
+      .live-stream {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Watch Your Donations in Action</h1>
+    <p>Join the live stream and see how your contributions are making a difference in real-time.</p>
+  </div>
+
+  <!-- Main Content Section -->
+  <div class="main-content">
+    <!-- Live Stream Section -->
+    <div class="live-stream">
+      <!-- YouTube Live Embed -->
+      <iframe src="https://www.youtube.com/embed/live_stream?channel=@rescuerangers24" 
+              title="YouTube Live Stream"></iframe>
+    </div>
+
+    <!-- Information Section -->
+    <div class="info-section">
+      <h2>Join the Live Stream</h2>
+      <p>We are excited to show you how your donations are being put to use! Tune in to our live stream and watch the Rescue Rangers Team in action.</p>
+      <a href="https://youtu.be/6SxYdjWyFuM?si=f6HfgbEv4rZrpSjG/live" target="_blank" class="join-live-btn">
+        Join Live on YouTube
+      </a>
+    </div>
+  </div>
+
+  <!-- Impact Statistics Section -->
+  <div class="impact-stats">
+    <h3>Impact So Far</h3>
+    <ul class="stats-list">
+      <li>
+        <span class="number">600+</span>
+        <span class="label">Families Helped</span>
+      </li>
+      <li>
+        <span class="number">1200+</span>
+        <span class="label">Meals Distributed</span>
+      </li>
+      <li>
+        <span class="number">250+</span>
+        <span class="label">Donations recieved</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+</body>
+</html>
